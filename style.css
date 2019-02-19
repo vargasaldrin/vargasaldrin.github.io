@@ -1,0 +1,237 @@
+body {
+  text-align: center;
+}
+
+#intro {
+  margin: 100px 0;
+}
+#intro h1 {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
+#intro h2 {
+  text-align: center;
+  font-family: "Share Tech Mono", monospace;
+}
+
+#main_content {
+  font-family: "VT323", monospace;
+  font-size: 3rem;
+}
+
+.boxContainer {
+  color: white;
+  padding: 2px;
+  border: 2px solid white;
+  overflow: hidden;
+  height: 700px;
+}
+@media (max-width: 576px) {
+  .boxContainer {
+    height: 600px;
+  }
+}
+
+.box1 {
+  background-color: black;
+  position: relative;
+  color: white;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 576px) {
+  .box1 {
+    height: 600px;
+  }
+}
+
+.box2 {
+  height: 700px;
+  position: relative;
+  background-color: white;
+  color: black;
+  font-size: 4rem;
+  width: 100%;
+}
+.box2 h2 {
+  font-family: "Press Start 2P", cursive;
+}
+.box2 p {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 2rem;
+}
+@media (max-width: 576px) {
+  .box2 {
+    height: 600px;
+  }
+}
+
+#about2 p {
+  display: flex;
+  align-items: center;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-top: 50px;
+  padding-left: 0;
+}
+#nav a {
+  color: black;
+  text-decoration: none;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.5rem;
+}
+#nav a:hover {
+  text-decoration: underline overline;
+}
+
+.projects {
+  padding: 4px;
+  border: 2px solid white;
+  background-color: black;
+  height: 300px;
+  color: white;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.projects h2 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+}
+.projects p {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.25rem;
+}
+.projects button {
+  font-family: "VT323", monospace;
+  font-size: 2rem;
+  border: 4px solid white;
+  background-color: black;
+  color: white;
+}
+.projects button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+#pic1 {
+  background-image: url(pictures/mabale.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#pic2 {
+  background-image: url(pictures/quiz-time.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#pic3 {
+  background-image: url(pictures/reservation.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#pic4 {
+  background-image: url(pictures/scoreboard.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#pic5 {
+  background-image: url(pictures/user-authentication.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#pic6 {
+  background-image: url(pictures/soundkit.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#sample {
+  border: 2px solid red;
+  height: 300px;
+  width: 500px;
+  margin: 10% 0 0 30%;
+  position: relative;
+  overflow: hidden;
+}
+
+#asdf {
+  background-color: black;
+  color: white;
+  height: 300px;
+  width: 100%;
+}
+
+#jkl {
+  background-color: white;
+  height: 300px;
+  width: 100%;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-700px);
+  }
+}
+#contact {
+  margin: 200px 0 25px 0;
+  background-color: black;
+  color: white;
+}
+#contact p {
+  font-size: 1.25rem;
+}
+
+#messageMe {
+  padding: 25px 0;
+}
+#messageMe h1 {
+  font-family: "Press Start 2P", cursive;
+}
+#messageMe p {
+  font-family: "Share Tech Mono", monospace;
+}
+
+#info {
+  padding: 25px 25px;
+  text-align: center;
+}
+#info .info_sub {
+  margin-bottom: 20px;
+}
+#info .info_sub a {
+  margin-right: 20px;
+  color: inherit;
+  text-decoration: none;
+}
+#info h2 {
+  font-family: "Press Start 2P", cursive;
+}
+#info h3 {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

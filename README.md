@@ -1,2 +1,2 @@
-# vargasaldrin.github.io
-My own personal website
+# portfolio
+My personal portfolio website
