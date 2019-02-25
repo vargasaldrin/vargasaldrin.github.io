@@ -8,6 +8,7 @@ const webtech = document.getElementById('webtech');
 const description = document.getElementById('description');
 const slideDown = document.getElementById('slideDown');
 const mq = window.matchMedia("(max-width: 576px");
+const closing = document.getElementsByClassName('fa-times');
 const list = [
     'Front-End Developer',
     'Programmer',
@@ -21,6 +22,9 @@ const list = [
 const mediaSize = window.matchMedia("(max-width: 576px");
 
 /***  Functions ***/
+
+
+
 inserter = (e) => {
     const txt = e.target.title.toString();
     e.target.innerHTML = txt;
@@ -124,61 +128,80 @@ main.addEventListener('click', (e) => {
         slideOut('htmlcss2');
         slideOut('javascript2');
         slideOut('about2');
+    } else if(e.target == closing) {
+        slideOut('about2');
     }
 });
 
 document.addEventListener('DOMContentLoaded',function(e){
-    // array with texts to type in typewriter
-    var dataText = [
-        'Front-End Developer',
-        'Programmer',
+    // List of sentences
+    var _CONTENT = [ 
+        'Front-end Developer',
+        'Javascript Developer',
+        'Lifelong Learner',
         'React Developer',
-        'SEO Enthusiast',
         'Boardgame Enthusiast',
-        'Pug Lover',
-        'Single',
-        'Ready to Mingle'
-    ]
-    
-    // type one text in the typwriter
-    // keeps calling itself until the text is finished
-    function typeWriter(text, i, fnCallback) {
-      // chekc if text isn't finished yet
-      if (i < (text.length)) {
-        // add next character to description
-       document.getElementById("description").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
-  
-        // wait for a while and call this function again for next character
+        'Loves Pugs',
+        'Critical Thinker',
+        'Detail Oriented',
+        'Ball is life',
+        '"Walang matigas na tinapay sa mainit na kape"'
+    ];
+
+    // Current sentence being processed
+    var _PART = 0;
+
+    // Character number of the current sentence being processed 
+    var _PART_INDEX = 0;
+
+    // Holds the handle returned from setInterval
+    var _INTERVAL_VAL;
+
+    // Element that holds the text
+    var _ELEMENT = document.getElementById("description");
+
+    // Implements typing effect
+    function Type() { 
+    var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+    _ELEMENT.innerHTML = text;
+    _PART_INDEX++;
+
+    // If full sentence has been displayed then start to delete the sentence after some time
+    if(text === _CONTENT[_PART]) {
+        clearInterval(_INTERVAL_VAL);
         setTimeout(function() {
-          typeWriter(text, i + 1, fnCallback)
-        }, 100);
-      }
-      // text finished, call callback if there is a callback function
-      else if (typeof fnCallback == 'function') {
-        // call callback after timeout
-        setTimeout(fnCallback, 700);
-      }
+            _INTERVAL_VAL = setInterval(Delete, 50);
+        }, 1000);
     }
-    // start a typewriter animation for a text in the dataText array
-     function StartTextAnimation(i) {
-       if (typeof dataText[i] == 'undefined'){
-          setTimeout(function() {
-            StartTextAnimation(0);
-          }, 20000);
-       }
-       // check if dataText[i] exists
-      if (i < dataText[i].length) {
-        // text exists! start typewriter animation
-       typeWriter(dataText[i], 0, function(){
-         // after callback (and whole text has been animated), start next text
-         StartTextAnimation(i + 1);
-       });
-      }
     }
-    // start the text animation
-    StartTextAnimation(0);
+
+    // Implements deleting effect
+    function Delete() {
+    var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+    _ELEMENT.innerHTML = text;
+    _PART_INDEX--;
+
+    // If sentence has been deleted then start to display the next sentence
+    if(text === '') {
+        clearInterval(_INTERVAL_VAL);
+
+        // If last sentence then display the first one, else move to the next
+        if(_PART == (_CONTENT.length - 1))
+            _PART = 0;
+        else
+            _PART++;
+        _PART_INDEX = 0;
+
+        // Start to display the next sentence after some time
+        setTimeout(function() {
+            _INTERVAL_VAL = setInterval(Type, 100);
+        }, 200);
+    }
+    }
+
+    // Start the typing effect on load
+    _INTERVAL_VAL = setInterval(Type, 100);
   });
 
 
   /* RESUME' ANIMATION*/
-

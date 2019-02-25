@@ -4,6 +4,7 @@ body {
 
 #intro {
   margin: 100px 0;
+  height: 100px;
 }
 #intro h1 {
   text-align: center;
@@ -28,7 +29,8 @@ body {
 }
 @media (max-width: 576px) {
   .boxContainer {
-    height: 600px;
+    height: auto;
+    border: none;
   }
 }
 
@@ -43,7 +45,7 @@ body {
 }
 @media (max-width: 576px) {
   .box1 {
-    height: 600px;
+    display: none;
   }
 }
 
@@ -64,7 +66,10 @@ body {
 }
 @media (max-width: 576px) {
   .box2 {
-    height: 600px;
+    padding: 10px 0px;
+    background-color: black;
+    color: white;
+    height: auto;
   }
 }
 
@@ -87,7 +92,7 @@ body {
   font-size: 1.5rem;
 }
 #nav a:hover {
-  text-decoration: underline overline;
+  text-decoration: line-through;
 }
 
 .projects {
@@ -159,36 +164,17 @@ body {
   background-position: center;
 }
 
-#sample {
-  border: 2px solid red;
-  height: 300px;
-  width: 500px;
-  margin: 10% 0 0 30%;
-  position: relative;
-  overflow: hidden;
+#resume .boxContainer {
+  margin: 100px auto;
+}
+#resume .boxContainer .box1 {
+  font-size: 3rem;
+  font-family: "VT323", monospace;
+}
+#resume .boxContainer a {
+  text-decoration: none;
 }
 
-#asdf {
-  background-color: black;
-  color: white;
-  height: 300px;
-  width: 100%;
-}
-
-#jkl {
-  background-color: white;
-  height: 300px;
-  width: 100%;
-}
-
-@keyframes appear {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-700px);
-  }
-}
 #contact {
   margin: 200px 0 25px 0;
   background-color: black;
@@ -206,6 +192,7 @@ body {
 }
 #messageMe p {
   font-family: "Share Tech Mono", monospace;
+  font-size: 1.5rem;
 }
 
 #info {

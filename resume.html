@@ -25,11 +25,25 @@
         </ul>
     </nav>
 
-    <div>
-        <h3><a href="assets/resume.pdf" target="_blank">Resume</a></h3>
-        <h3><a href="https://www.freecodecamp.org/certification/hulikanibargas/responsive-web-design" target="_blank">https://www.freecodecamp.org/certification/hulikanibargas/responsive-web-design</a></h3>
-        <h3><a href="https://www.freecodecamp.org/certification/hulikanibargas/javascript-algorithms-and-data-structures" target="_blank">https://www.freecodecamp.org/certification/hulikanibargas/javascript-algorithms-and-data-structures</a></h3></div>
-    
-    <script src="sample.js"></script>
+    <section id="resume" class="container">
+        <div class="row">
+            <div class="col-6 boxContainer">
+                <a href="assets/resume.pdf" target="_blank"><div title="Resume" id="resumePDF" class="box1"><i class="fas fa-file-alt fa-2x"></i></div></a>
+            </div>
+            <div class="col-6 boxContainer">
+                <a href="https://www.freecodecamp.org/hulikanibargas" target="_blank"><div title="Certificate" id="certificate" class="box1"><i class="fas fa-certificate fa-2x"></i></div></a>
+                <div class="box2">
+                    <h2>Responsive Web Design</h2>
+                    <h2>JavaScript Algorithms and Data Structures</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © Aldrin Vargas 2019
+    </footer>
+       
+    <script src="resume.js"></script>
 </body>
 </html>
