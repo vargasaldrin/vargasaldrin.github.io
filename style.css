@@ -4,7 +4,6 @@ body {
 
 #intro {
   margin: 100px 0;
-  height: 100px;
 }
 #intro h1 {
   text-align: center;
@@ -29,8 +28,7 @@ body {
 }
 @media (max-width: 576px) {
   .boxContainer {
-    height: auto;
-    border: none;
+    height: 600px;
   }
 }
 
@@ -45,7 +43,7 @@ body {
 }
 @media (max-width: 576px) {
   .box1 {
-    display: none;
+    height: 600px;
   }
 }
 
@@ -56,20 +54,21 @@ body {
   color: black;
   font-size: 4rem;
   width: 100%;
+  padding-top: 50px;
 }
 .box2 h2 {
   font-family: "Press Start 2P", cursive;
 }
-.box2 p {
+.box2 p, .box2 li {
   font-family: "Share Tech Mono", monospace;
   font-size: 2rem;
 }
+.box2 ul {
+  list-style-type: none;
+}
 @media (max-width: 576px) {
   .box2 {
-    padding: 10px 0px;
-    background-color: black;
-    color: white;
-    height: auto;
+    height: 600px;
   }
 }
 
@@ -92,7 +91,7 @@ body {
   font-size: 1.5rem;
 }
 #nav a:hover {
-  text-decoration: line-through;
+  text-decoration: underline overline;
 }
 
 .projects {
@@ -135,25 +134,25 @@ body {
 }
 
 #pic2 {
-  background-image: url(pictures/quiz-time.jpg);
+  background-image: url(pictures/liquor.jpg);
   background-size: cover;
   background-position: center;
 }
 
 #pic3 {
-  background-image: url(pictures/reservation.jpg);
+  background-image: url(pictures/netflix.jpg);
   background-size: cover;
   background-position: center;
 }
 
 #pic4 {
-  background-image: url(pictures/scoreboard.jpg);
+  background-image: url(pictures/punk_beers.jpg);
   background-size: cover;
   background-position: center;
 }
 
 #pic5 {
-  background-image: url(pictures/user-authentication.jpg);
+  background-image: url(pictures/cathay_4.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -164,19 +163,38 @@ body {
   background-position: center;
 }
 
-#resume .boxContainer {
-  margin: 100px auto;
-}
-#resume .boxContainer .box1 {
-  font-size: 3rem;
-  font-family: "VT323", monospace;
-}
-#resume .boxContainer a {
-  text-decoration: none;
+#sample {
+  border: 2px solid red;
+  height: 300px;
+  width: 500px;
+  margin: 10% 0 0 30%;
+  position: relative;
+  overflow: hidden;
 }
 
+#asdf {
+  background-color: black;
+  color: white;
+  height: 300px;
+  width: 100%;
+}
+
+#jkl {
+  background-color: white;
+  height: 300px;
+  width: 100%;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-700px);
+  }
+}
 #contact {
-  margin: 200px 0 25px 0;
+  margin-top: 200px;
   background-color: black;
   color: white;
 }
@@ -192,7 +210,6 @@ body {
 }
 #messageMe p {
   font-family: "Share Tech Mono", monospace;
-  font-size: 1.5rem;
 }
 
 #info {
