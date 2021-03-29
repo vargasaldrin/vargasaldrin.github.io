@@ -26,6 +26,7 @@ body {
   overflow: hidden;
   height: 700px;
 }
+
 @media (max-width: 576px) {
   .boxContainer {
     height: 600px;
@@ -59,7 +60,8 @@ body {
 .box2 h2 {
   font-family: "Press Start 2P", cursive;
 }
-.box2 p, .box2 li {
+.box2 p,
+.box2 li {
   font-family: "Share Tech Mono", monospace;
   font-size: 2rem;
 }
@@ -140,19 +142,19 @@ body {
 }
 
 #pic3 {
-  background-image: url(pictures/netflix.jpg);
+  background-image: url(pictures/geeksonabeach.JPG);
   background-size: cover;
   background-position: center;
 }
 
 #pic4 {
-  background-image: url(pictures/punk_beers.jpg);
+  background-image: url(pictures/gloryreborn.JPG);
   background-size: cover;
   background-position: center;
 }
 
 #pic5 {
-  background-image: url(pictures/cathay_4.jpg);
+  background-image: url(pictures/flyingtigers.JPG);
   background-size: cover;
   background-position: center;
 }
@@ -238,4 +240,10 @@ body {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+#description {
+  height: 38px;
+}
+
+.project-header {
+  margin: 20px auto;
+}
